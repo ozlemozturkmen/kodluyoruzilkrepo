@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GORSELLER</title>
+</head>
+
+<body>
+    <h1>GORSELLERLE CALİSMAK</h1>
+    <!-- src=""Kullanımı
+    Kod bloğundaki src="" özelliğine görselin URL ya da dosya adresi belirtilerek resim HTML sayfasına çağırılır. (Resmi webden çağırmak için resmin URL'ini src=”…” parametesine eklemek yeterlidir.)
+ -->
+    <br>
+    <img src="https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_520,h_300/https://assets.ubuntu.com/v1/fe859a7f-Jammy+Jellyfish+RGB.svg"
+        alt="ubuntudaki görsel">
+
+    <!-- Yukarıdaki örnekte resim HTML dosyasıyla aynı dizinde(klasörde) olduğu için direkt adını ve uzantısını yazmak yeterlidir. Burada img uzantısına dikkat etmek önemli, HTML dosyaları nasıl .html ile bitiyorsa tüm resim dosyalarının sonu da .xbm, .gif, .png veya .jpg ile veya başka bir resim formatıyla bitmelidir. -->
+
+    <h2>YAYGIN IMAGE FORMATLARI</h2>
+    <p>Diyelimki projenin içerisindebir dizin oluşturdunuz (images) ve resminizi bu dizine eklediniz. Bu defa çağirmak
+        için öncelikle images dizinine gitmek gerekiyor.</p>
+    <img src="images/1.jpeg" alt="loremresim1">
+    <!--
+        Ya da resim bir üst dizinde kalıyor olabilir. Bu durumda bir üst dizine çıkıp images dizinini bulup resmi çağırmak gerekiyor. (Üst dizine çıkmak için ../ kullanırız.)
+        ****<img src="../images/ornek.jpg"/>***
+        Bu şekilde istediğiniz kadar üst dizine çıkabilirsiniz.
+        ****<img src="../../images/ornek.jpg"/>*** -->
+
+    <h3><b>alt=""</b> Kullanimi</h3>
+    <p>Alt textlerin temel amaci, görüntüleri göremeyen kullanicilar için metinler sunmaktir. Kullanici görseli
+        görüntüleyemez ise (Yavaş bağlanti, src özelliğinde hata vb.) alt özelliği görüntü için alternatif
+        bilgilendirici bir metin içerir.</p>
+    <img src="images/1.jpeg" alt="resimde trafik kalabiligi gösterilmistir">
+    <h3><b>title=""</b> Kullanimi</h3>
+    <p>Title özelliği kullaniciyi bilgilendirme amaci taşir. Cursor(mouse imleci) ile görselin üzerine gelince bu
+        özelliğe verilen text mesaji görünür. Ek açiklama gerektirecek resimlerde kullanabiliriz. Bilgilendirme amaci
+        taşir.</p>
+    <img src="images/1.jpeg" title="image" />
+    <h3><b>NOT</b></h3>
+    <p>Title ve Alt parametreleri SEO açisindan önem taşimaktadir.</p>
+    <h3><b>width</b> ve <b>height</b> Kullanimi</h3>
+    <p>Görsele istenen ölçüleri vermek için width ve height özellikleri kullanilir.
+
+        Width yatay genişlik, Height ise dikey uzunluk için kullanilir.
+
+        Width ve Height özellikleri tanimlanmadiği zaman görsel sayfada gerçek ölçüleri ile görünür. Bu ölçülerden
+        yalnizca birine değer verildiğinde görsel oranlari korunarak belirlenen ölçüde görünür. Her iki özelliğe de
+        değer verildiğinde resim oranlari yeni verilen ölçülerde olduğu gibi görünür. Bu kullanim resim ölçüleri ile
+        uyumlu olmadiği zaman resimde oransal bozukluklar oluşur.</p>
+    <img src="images/1.jpeg" width="=300" />
+    <img src="images/1.jpeg" height="400" />
+    <img src="images/1.jpeg" width="300" height="600" />
+    <img src="images/1.jpeg" height="100%" />
+    <h3>BORDER KULLANİMİ</h3>
+    <p>Görseli belirtilen kalinlikta çerçeve içine alir. Daha gelişmiş CSS Border özelliği bunun yerine kullanilabilir.
+
+        Aşağida border örneği: Görsele 4 pixel kalinlikta border verir.</p>
+    <img src="images/1.jpeg" border="4" />
+    <h3>align Kullanimi</h3>
+    <p>Web sayfasinda resmin gözükeceği pozisyonu belirlemede align özelliği kullanilir. Bu özelliğe verilebilecek
+        değerler şunlardir: left, right. Görselin sağa veya sola yasli çikmasini sağlar.</p>
+    <img src="images/1.jpeg" align="right">
+    <br>
+
+    <img src="images/1.jpeg" align="left">
+    <br>
+
+
+
+    <h3>GÖRSELE LINK VERMEK</h3>
+    <br>
+    <p>Görsele link vermek için imgtag'i a taginin içerisinde kullanilir. Yönlendirilmek istenen yerin URL'i a taginin
+        href özelliğine yazilir. Görsel ise a taginin açiklama kismina eklenir.</p>
+    <br>
+    <a href="https://picsum.photos">
+        <img src="https://picsum.photos/200/300" alt="Random photo">
+    </a>
+    <h3>MAP VE AREA</h3>
+    <p>Görselleriniz hyperlink atamaniz durumunda görselin tüm alani link alani haline dönüşecektir. Görselin herhangi
+        bir yerine tiklanilmasi durumunda görsel sizi tanimlanan bağlantiya gönderecektir. <img> etiketleri için
+        kullanilan <map> ve <area> etiketleri ile resmin içindeki koordinatlarla belirlediğimiz bir alani sadece link
+            haline getirebiliriz. Eklediğimiz <area> etiketi kadar belirlenen alani bir resim üzerinden birçok
+            bağlantiya link verebiliriz.
+
+            Örneğin Instagram'da bazi saticilarda gördüğünüz bir insan fotoğraf üzerinde pantolon ve ayakkabinin ürün
+            linklerini ayri ayri vermek isterseniz kullanabilirsiniz.</p>
+    <img src="images/workplace.jpeg" alt="workplace" usemap="#workmap" widht="400" height="379">
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350"
+            href="https://www.teknosa.com/bilgisayar-tablet-c-116?gclid=CjwKCAjw-L-ZBhB4EiwA76YzOR5JFgWETpURke2HAOvQ-P7bVC5tgUrKyIVQCXDwZLkUzfGbrEmP5hoCk6oQAvD_BwE&gclsrc=aw.ds"
+            alt="computer">
+        <area shape="rect" coords="290,172,333,250" href="https://www.apple.com/tr/iphone/" alt="phone">
+        <area shape="circle" coords="337,300,44" href="https://www.starbucks.com.tr/" alt="Cup of coffee">
+    </map>
+    <h3>onload Event'i Kullanimi</h3>
+    <p>Bu olay görsel yüklenmesi tamamlandiğinda çalişacak fonksiyonu belirler. Herhangi bir nedenle görsel yüklenemezse
+        ya da belirtilen adreste resim yoksa fonksiyon çalişmaz.
+
+        Aşağidaki örnekte görsel yüklenmesi tamamlandiğinda resimYuklendi() fonksiyonu çalişacak ve ekrana Resim
+        Yüklendi. uyarisi JavaScript tarafindan bastirilacak. Bu konuyu ileride çok daha detayli göreceğiz.</p>
+    <img src="images/workplace.jpeg" onload="resimYuklendi()">
+    <script>
+        function resimYuklendi() {
+            alert("Resim yüklendi.");
+        }
+    </script>
+    <h3>Picture Elementi ile Kullanim</h3>
+    <p>HTML5 ile gelen picture elementi web sayfamizda responsive image'ler kullanmamiz konusunda büyük kolayliklar
+        sağliyor. Bir tane img ve birden fazla source içerebilir. picture tagi ekran boyutlarina göre birden çok source
+        kulllanmamizi sağlar bu sayede ekran boyutu değiştikçe farkli image'leri kullanabilirsiniz.
+
+        Örnek: Burada ekran genişliğinin 800 pikselden küçük olduğu durumlarda başka diğer koşullarda ise başka bir
+        görsel kullanilacak.</p>
+
+    <picture>
+        <source srcset="https://picsum.photos/200/300" media="(min-width: 800px)">
+        <img src="https://picsum.photos/400" alt="">
+    </picture>
+    <picture>
+        <source
+            srcset="https://image.freepik.com/free-photo/selective-focus-shot-brown-cat-posing-camera_181624-25909.jpg"
+            media="(max-width: 600px)">
+        <source
+            srcset="https://image.freepik.com/free-photo/selective-focus-shot-gray-cat-with-angry-cat-face_181624-13282.jpg"
+            media="(max-width: 1000px)">
+        <img src="https://image.freepik.com/free-photo/white-cat-lies-woman-s-knees_8353-539.jpg" alt="Kedi" />
+    </picture>
+    <p>Tarayici, her bir source öğesini inceleyip eşleşme sağlar. Eşleşme bulunamazsa veya tarayici <picture> öğesini
+            desteklemiyorsa, <img> öğesinin src URL'si seçilir. Seçilen görüntü daha sonra <img> öğesinin kapladiği
+            alanda sunulur.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
